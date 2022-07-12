@@ -1,14 +1,15 @@
-package com.introjee.introjee;
+package com.introjee;
 
 import java.io.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
-@WebServlet(name = "helloServlet", value = "/hello-servlet")
+@WebServlet(name = "helloServlet", value = "/pageOne")
 public class HelloServlet extends HttpServlet {
     private String message;
 
     public void init() {
+        System.out.println("servlet créé");
         message = "Hello yassin!";
     }
 
@@ -23,5 +24,6 @@ public class HelloServlet extends HttpServlet {
     }
 
     public void destroy() {
+        System.out.println("servlet detruit");
     }
 }
