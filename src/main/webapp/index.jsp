@@ -8,6 +8,14 @@
 <%System.out.println("hello");%>
 <h1><%= "Hello World!" %></h1>
 <br/>
-<a href="pageOne">page one</a>
+<%--<a href="pageOne">hello</a>--%>
+<%--<br/>--%>
+<%--<a href="productServlet">productServlet</a>--%>
+<%--<a href="product/getOne.jsp">getOne</a>--%>
+<%--<br/>--%>
+<a href="product/getAll.jsp">liste de produits</a>
+<br/>
+<a href="product/addProduct.jsp">ajouter un produit</a>
+
 </body>
 </html>

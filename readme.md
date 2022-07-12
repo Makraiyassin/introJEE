@@ -1,0 +1,1 @@
+https://app.pluralsight.com/paths/certificate/java-se-11-developer-certification-1z0-819
