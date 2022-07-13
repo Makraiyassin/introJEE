@@ -10,7 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77bebcba-2840-4303-bb99-f1cc38f5da68" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/product/updateProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/product/updateProduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/introjee/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/introjee/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/product/getAll.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/product/getAll.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +171,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1657612186151</updated>
-      <workItem from="1657612187760" duration="32399000" />
+      <workItem from="1657612187760" duration="32860000" />
     </task>
     <servers />
   </component>

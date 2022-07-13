@@ -58,6 +58,7 @@
             <div class="card-body">
                 <a class="card-link" href="<%=request.getContextPath()%>/product/getOne.jsp?id=<%=Integer.toString(product.getId())%>">détail</a>
                 <a class="card-link" href="<%=request.getContextPath()%>/update?id=<%=Integer.toString(product.getId())%>">modifier</a>
+                <a class="card-link" href="<%=request.getContextPath()%>/remove?id=<%=Integer.toString(product.getId())%>">supprimer</a>
             </div>
         </div>
 

@@ -50,4 +50,9 @@ public class ProductService {
         toUpdate.setPrice(product.getPrice());
         return toUpdate.getId();
     }
+    public int remove(int id){
+        Product toRemove = getOne(id);
+        productList.remove(toRemove);
+        return id;
+    }
 }
