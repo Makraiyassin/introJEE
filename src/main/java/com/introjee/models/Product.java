@@ -7,16 +7,16 @@ public class Product {
     private String category;
     private double price;
 
-    public Product(int id, String name, String marque, String category, double price) {
+    public Product(int id, String name, String brand, String category, double price) {
         this.id = id;
         this.name = name;
-        this.brand = marque;
+        this.brand = brand;
         this.category = category;
         this.price = price;
     }
-    public Product(String name, String marque, String category, double price) {
+    public Product(String name, String brand, String category, double price) {
         this.name = name;
-        this.brand = marque;
+        this.brand = brand;
         this.category = category;
         this.price = price;
     }
@@ -37,12 +37,12 @@ public class Product {
         this.name = name;
     }
 
-    public String getMarque() {
+    public String getBrand() {
         return brand;
     }
 
-    public void setMarque(String marque) {
-        this.brand = marque;
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 
     public String getCategory() {
@@ -57,7 +57,7 @@ public class Product {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 

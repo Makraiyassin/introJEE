@@ -66,7 +66,7 @@ public class ProductServlet extends HttpServlet {
                              <p><span>prix: </span> %s </p>
                          </div>
                      </li>
-                """, product.getId(), product.getName(), product.getMarque(), product.getCategory(), product.getPrice()
+                """, product.getId(), product.getName(), product.getBrand(), product.getCategory(), product.getPrice()
         );
         out.println(
                 """
@@ -108,7 +108,7 @@ public class ProductServlet extends HttpServlet {
                                      <p><span>prix: </span> %s </p>
                                  </div>
                              </li>
-                            """, product.getId(), product.getName(), product.getMarque(), product.getCategory(), product.getPrice()
+                            """, product.getId(), product.getName(), product.getBrand(), product.getCategory(), product.getPrice()
             );
             out.println(
                     """

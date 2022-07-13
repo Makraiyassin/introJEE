@@ -51,19 +51,20 @@
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item"><span>id: </span> <%= product.getId() %></li>
-                <li class="list-group-item"><span>marque: </span> <%= product.getMarque() %></li>
+                <li class="list-group-item"><span>marque: </span> <%= product.getBrand() %></li>
                 <li class="list-group-item"><span>categorie: </span> <%= product.getCategory() %></li>
                 <li class="list-group-item"><span>prix: </span> <%= product.getPrice() %> </li>
             </ul>
             <div class="card-body">
-                <a class="card-link" href="http://localhost:8080/introJEE/product/getOne.jsp?id=<%=Integer.toString(product.getId())%>">détail</a>
+                <a class="card-link" href="<%=request.getContextPath()%>/product/getOne.jsp?id=<%=Integer.toString(product.getId())%>">détail</a>
+                <a class="card-link" href="<%=request.getContextPath()%>/update?id=<%=Integer.toString(product.getId())%>">modifier</a>
             </div>
         </div>
 
         <%--    <div>--%>
         <%--        <p><span>id: </span> <%= product.getId() %></p>--%>
         <%--        <p><span>nom: </span> <%= product.getName() %> </p>--%>
-        <%--        <p><span>marque: </span> <%= product.getMarque() %> </p>--%>
+        <%--        <p><span>marque: </span> <%= product.getBrand() %> </p>--%>
         <%--        <p><span>categorie: </span> <%= product.getCategory() %> </p>--%>
         <%--        <p><span>prix: </span> <%= product.getPrice() %> </p>--%>
         <%--        <a href="http://localhost:8080/introJEE/product/getOne.jsp?id=<%=Integer.toString(product.getId())%>">détail</a>--%>

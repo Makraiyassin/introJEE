@@ -40,6 +40,7 @@
         <input type="text" class="form-control" name="category" id="category" placeholder="(ex: multimedia)">
     </div>
     <div class="input-group">
+        <label for="price" class="form-label">Prix</label>
         <input type="number" class="form-control" name="price" id="price" placeholder="(ex: 400)">
         <div class="input-group-text">€</div>
     </div>

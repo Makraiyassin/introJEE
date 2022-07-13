@@ -5,7 +5,6 @@
   <title>JSP - Hello World</title>
 </head>
 <body>
-<%System.out.println("hello");%>
 <h1><%= "Hello World!" %></h1>
 <br/>
 <%--<a href="pageOne">hello</a>--%>

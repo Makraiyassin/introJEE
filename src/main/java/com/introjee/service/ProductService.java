@@ -42,4 +42,12 @@ public class ProductService {
         System.out.println(productList.get(productList.size()-1));
         return lastId;
     }
+    public int update(Product product){
+        Product  toUpdate = getOne(product.getId());
+        toUpdate.setName(product.getName());
+        toUpdate.setBrand(product.getBrand());
+        toUpdate.setCategory(product.getCategory());
+        toUpdate.setPrice(product.getPrice());
+        return toUpdate.getId();
+    }
 }
