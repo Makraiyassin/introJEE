@@ -39,10 +39,13 @@
         <label for="category" class="form-label">Categorie</label>
         <input type="text" class="form-control" name="category" id="category" placeholder="(ex: multimedia)">
     </div>
-    <div class="input-group">
+
+    <div class="col-12">
         <label for="price" class="form-label">Prix</label>
-        <input type="number" class="form-control" name="price" id="price" placeholder="(ex: 400)">
-        <div class="input-group-text">€</div>
+        <div class="input-group">
+            <input type="number" class="form-control" name="price" id="price" placeholder="(ex: 400)">
+            <div class="input-group-text">€</div>
+        </div>
     </div>
 
     <div class="col-6">

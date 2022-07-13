@@ -35,10 +35,12 @@
         <label for="category" class="form-label">Categorie</label>
         <input type="text" class="form-control" name="category" id="category" value="<%= toUpdate.getCategory() %>">
     </div>
-    <div class="input-group">
+    <div class="col-12">
         <label for="price" class="form-label">Prix</label>
-        <input type="number" class="form-control" name="price" id="price" value="<%= toUpdate.getPrice() %>">
-        <div class="input-group-text">€</div>
+        <div class="input-group">
+            <input type="number" class="form-control" name="price" id="price" value="<%= toUpdate.getPrice() %>">
+            <div class="input-group-text">€</div>
+        </div>
     </div>
 
     <div class="col-6">
