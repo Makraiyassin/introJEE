@@ -11,33 +11,69 @@
 <html>
 <head>
     <title>Detail</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<%! ProductService service = ProductService.getInstance(); %>
-<%
-    List<Product> productList = service.getAll();
-    if(productList.size() == 0) {
-        response.setStatus(404);
-        return;
+<style>
+    #main{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 60%;
+        margin: auto;
     }
-%>
-<h1>liste produits: </h1>
+    #main .card{
+        margin: 1%;
+    }
+    #retour{
+        margin: 1% 50%;
+    }
+</style>
+    <%! ProductService service = ProductService.getInstance(); %>
+    <%
+        List<Product> productList = service.getAll();
+        if(productList.size() == 0) {
+            response.setStatus(404);
+            return;
+        }
+    %>
+    <h1>liste produits: </h1>
 
+    <div id="main">
 
-<%--<%productList.forEach(product -> {%>--%>
-<%for (Product product: productList) {%>
-<div>
-    <p><span>id: </span> <%= product.getId() %></p>
-    <p><span>nom: </span> <%= product.getName() %> </p>
-    <p><span>marque: </span> <%= product.getMarque() %> </p>
-    <p><span>categorie: </span> <%= product.getCategory() %> </p>
-    <p><span>prix: </span> <%= product.getPrice() %> </p>
-    <a href="http://localhost:8080/introJEE/product/getOne.jsp?id= <%=Integer.toString(product.getId())%>">détail</a>
+        <%--<%productList.forEach(product -> {%>--%>
+        <%for (Product product: productList) {%>
 
-</div>
+        <div class="card" >
+            <img src="https://picsum.photos/200" class="card-img-top" alt="image random">
+            <div class="card-body">
+                <h5 class="card-title"><%= product.getName() %></h5>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><span>id: </span> <%= product.getId() %></li>
+                <li class="list-group-item"><span>marque: </span> <%= product.getMarque() %></li>
+                <li class="list-group-item"><span>categorie: </span> <%= product.getCategory() %></li>
+                <li class="list-group-item"><span>prix: </span> <%= product.getPrice() %> </li>
+            </ul>
+            <div class="card-body">
+                <a class="card-link" href="http://localhost:8080/introJEE/product/getOne.jsp?id=<%=Integer.toString(product.getId())%>">détail</a>
+            </div>
+        </div>
 
-<% };%>
+        <%--    <div>--%>
+        <%--        <p><span>id: </span> <%= product.getId() %></p>--%>
+        <%--        <p><span>nom: </span> <%= product.getName() %> </p>--%>
+        <%--        <p><span>marque: </span> <%= product.getMarque() %> </p>--%>
+        <%--        <p><span>categorie: </span> <%= product.getCategory() %> </p>--%>
+        <%--        <p><span>prix: </span> <%= product.getPrice() %> </p>--%>
+        <%--        <a href="http://localhost:8080/introJEE/product/getOne.jsp?id=<%=Integer.toString(product.getId())%>">détail</a>--%>
 
-<a href="http://localhost:8080/introJEE/">retour</a>
+        <%--    </div>--%>
+
+        <% };%>
+    </div>
+
+    <a href=".." id="retour" class="btn btn-outline-primary">retour</a>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

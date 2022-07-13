@@ -11,9 +11,12 @@
   <component name="ChangeListManager">
     <list default="true" id="77bebcba-2840-4303-bb99-f1cc38f5da68" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/introjee/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/introjee/ProductServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/introjee/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/introjee/servlet/HelloServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/introjee/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/introjee/servlet/ProductServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/introjee/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/introjee/models/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/introjee/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/introjee/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/product/addProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/product/addProduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/product/getAll.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/product/getAll.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -173,7 +176,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1657612186151</updated>
-      <workItem from="1657612187760" duration="16708000" />
+      <workItem from="1657612187760" duration="27046000" />
     </task>
     <servers />
   </component>
@@ -190,5 +193,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/introjee/servlet/ProductServlet.java</url>
+          <line>125</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

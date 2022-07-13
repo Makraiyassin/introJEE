@@ -1,4 +1,4 @@
-package com.introjee;
+package com.introjee.servlet;
 
 import com.introjee.models.Product;
 import com.introjee.service.ProductService;

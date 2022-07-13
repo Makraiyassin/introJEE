@@ -1,4 +1,4 @@
-package com.introjee;
+package com.introjee.servlet;
 
 import java.io.*;
 import javax.servlet.http.*;

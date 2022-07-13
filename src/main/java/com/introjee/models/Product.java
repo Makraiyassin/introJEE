@@ -3,14 +3,20 @@ package com.introjee.models;
 public class Product {
     private int id;
     private String name;
-    private String marque;
+    private String brand;
     private String category;
-    private int price;
+    private double price;
 
-    public Product(int id, String name, String marque, String category, int price) {
+    public Product(int id, String name, String marque, String category, double price) {
         this.id = id;
         this.name = name;
-        this.marque = marque;
+        this.brand = marque;
+        this.category = category;
+        this.price = price;
+    }
+    public Product(String name, String marque, String category, double price) {
+        this.name = name;
+        this.brand = marque;
         this.category = category;
         this.price = price;
     }
@@ -32,11 +38,11 @@ public class Product {
     }
 
     public String getMarque() {
-        return marque;
+        return brand;
     }
 
     public void setMarque(String marque) {
-        this.marque = marque;
+        this.brand = marque;
     }
 
     public String getCategory() {
@@ -47,11 +53,22 @@ public class Product {
         this.category = category;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", brand='" + brand + '\'' +
+                ", category='" + category + '\'' +
+                ", price=" + price +
+                '}';
     }
 }

@@ -28,11 +28,11 @@
 <h1>Detail d'un produit</h1>
 
  <div>
-     <p><span>id: </span> <%= product.getId() %></p>
+     <p><span>id: </span> <%= product.getId() %> </p>
      <p><span>nom: </span> <%= product.getName() %> </p>
      <p><span>marque: </span> <%= product.getMarque() %> </p>
      <p><span>categorie: </span> <%= product.getCategory() %> </p>
-     <p><span>prix: </span> <%= product.getPrice() %> </p>
+     <p><span>prix: </span> <%= product.getPrice() %> € </p>
  </div>
 </body>
 </html>
