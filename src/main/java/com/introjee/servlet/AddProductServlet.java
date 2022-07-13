@@ -25,7 +25,7 @@ public class AddProductServlet extends HttpServlet {
             double price= Integer.parseInt(request.getParameter("price"));
             Product toInsert = new Product(name,brand,category,price);
             int id = productService.insert(toInsert);
-            response.sendRedirect(request.getContextPath()+"/product/getOne.jsp?id="+id);
+            response.sendRedirect(request.getContextPath()+"/product/getAll.jsp");
     //        request.getRequestDispatcher(request.getContextPath()+"/product/getOne.jsp?id="+id).forward(request,response);
         }catch (NumberFormatException e){
             request.getRequestDispatcher("/product/addProduct.jsp").forward(request,response);

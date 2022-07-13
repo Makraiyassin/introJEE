@@ -37,7 +37,7 @@ public class UpdateProductServlet extends HttpServlet {
             double price= Double.parseDouble(request.getParameter("price"));
             Product toUpdate = new Product(id, name,brand,category,price);
             productService.update(toUpdate);
-            response.sendRedirect(request.getContextPath()+"/product/getOne.jsp?id="+id);
+            response.sendRedirect(request.getContextPath()+"/product/getAll.jsp");
         }catch (NumberFormatException e){
             System.out.println(e);
             response.sendRedirect(request.getContextPath()+"/product/getAll.jsp");

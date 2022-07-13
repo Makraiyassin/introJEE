@@ -1,7 +1,11 @@
 package com.introjee.service;
 
+import com.introjee.daos.ProductDao;
 import com.introjee.exception.ProductNotFoundException;
 import com.introjee.models.Product;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
 
 import javax.servlet.ServletException;
 import java.util.ArrayList;
@@ -11,20 +15,25 @@ public class ProductService {
     private static ProductService instance;
     private final List<Product> productList = new ArrayList<>();
     private int lastId;
+
+    EntityManagerFactory emf = Persistence.createEntityManagerFactory("marketdbPersist");
+    EntityManager manager = emf.createEntityManager();
+    ProductDao dao = new ProductDao(manager);
     public static ProductService getInstance() {
         System.out.println("recup dans l'instance");
         return instance == null ? instance = new ProductService() : instance;
     }
     public ProductService() {
-        productList.add(new Product(1,"pomme","pink lady","fruit",3));
-        productList.add(new Product(2,"banane","chicita","fruit",2));
-        productList.add(new Product(3,"ordinateur","hp","multimedia",400));
-        productList.add(new Product(4,"ordinateur","hp","multimedia",400));
-        productList.add(new Product(5,"ordinateur","hp","multimedia",400));
-        productList.add(new Product(6,"ordinateur","hp","multimedia",400));
-        productList.add(new Product(7,"ordinateur","hp","multimedia",400));
-        productList.add(new Product(8,"ordinateur","hp","multimedia",400));
-        lastId = 8;
+//        productList.add(new Product(1,"pomme","pink lady","fruit",3));
+//        productList.add(new Product(2,"banane","chicita","fruit",2));
+//        productList.add(new Product(3,"ordinateur","hp","multimedia",400));
+//        productList.add(new Product(4,"ordinateur","hp","multimedia",400));
+//        productList.add(new Product(5,"ordinateur","hp","multimedia",400));
+//        productList.add(new Product(6,"ordinateur","hp","multimedia",400));
+//        productList.add(new Product(7,"ordinateur","hp","multimedia",400));
+//        productList.add(new Product(8,"ordinateur","hp","multimedia",400));
+//        lastId = 8;
+
     }
     public List<Product> getAll(){
         return new ArrayList<>(productList);
