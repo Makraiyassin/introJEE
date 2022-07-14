@@ -38,8 +38,8 @@ public class UpdateProductServlet extends HttpServlet {
             Product toUpdate = new Product(id, name,brand,category,price);
             productService.update(toUpdate);
             response.sendRedirect(request.getContextPath()+"/product/getAll.jsp");
-        }catch (NumberFormatException e){
-            System.out.println(e);
+        }catch (NumberFormatException ex){
+            System.out.println(ex);
             response.sendRedirect(request.getContextPath()+"/product/getAll.jsp");
         }
     }

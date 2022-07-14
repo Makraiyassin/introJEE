@@ -14,9 +14,9 @@ import java.util.List;
 public class ProductService {
     private static ProductService instance;
     private final List<Product> productList = new ArrayList<>();
-    private int lastId;
+//    private int lastId;
 
-    EntityManagerFactory emf = Persistence.createEntityManagerFactory("marketdbPersist");
+    EntityManagerFactory emf = Persistence.createEntityManagerFactory("shopjeePersist");
     EntityManager manager = emf.createEntityManager();
     ProductDao dao = new ProductDao(manager);
     public static ProductService getInstance() {
@@ -24,15 +24,16 @@ public class ProductService {
         return instance == null ? instance = new ProductService() : instance;
     }
     public ProductService() {
-//        productList.add(new Product(1,"pomme","pink lady","fruit",3));
-//        productList.add(new Product(2,"banane","chicita","fruit",2));
-//        productList.add(new Product(3,"ordinateur","hp","multimedia",400));
-//        productList.add(new Product(4,"ordinateur","hp","multimedia",400));
-//        productList.add(new Product(5,"ordinateur","hp","multimedia",400));
-//        productList.add(new Product(6,"ordinateur","hp","multimedia",400));
-//        productList.add(new Product(7,"ordinateur","hp","multimedia",400));
-//        productList.add(new Product(8,"ordinateur","hp","multimedia",400));
+//        productList.add(new Product("pomme","pink lady","fruit",3));
+//        productList.add(new Product("banane","chicita","fruit",2));
+//        productList.add(new Product("ordinateur","hp","multimedia",400));
+//        productList.add(new Product("ordinateur","hp","multimedia",400));
+//        productList.add(new Product("ordinateur","hp","multimedia",400));
+//        productList.add(new Product("ordinateur","hp","multimedia",400));
+//        productList.add(new Product("ordinateur","hp","multimedia",400));
+//        productList.add(new Product("ordinateur","hp","multimedia",400));
 //        lastId = 8;
+        productList.addAll(dao.getAll());
 
     }
     public List<Product> getAll(){
@@ -46,13 +47,15 @@ public class ProductService {
                 .orElse(null);
     }
     public int insert(Product product){
-        product.setId(++lastId);
-        productList.add(product);
-        System.out.println(productList.get(productList.size()-1));
-        return lastId;
+//        product.setId(++lastId);
+//        productList.add(product);
+//        return lastId;
+        productList.add(dao.insert(product));
+        return product.getId();
     }
     public int update(Product product){
-        Product  toUpdate = getOne(product.getId());
+//        Product  toUpdate = getOne(product.getId());
+        Product  toUpdate = getOne(dao.update(product).getId());
         toUpdate.setName(product.getName());
         toUpdate.setBrand(product.getBrand());
         toUpdate.setCategory(product.getCategory());
@@ -61,7 +64,8 @@ public class ProductService {
     }
     public int remove(int id){
         Product toRemove = getOne(id);
-        productList.remove(toRemove);
+//        productList.remove(toRemove);
+        productList.remove(dao.delette(id));
         return id;
     }
 }

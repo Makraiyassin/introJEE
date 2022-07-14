@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="introJEE:war exploded" />
+      <artifact name="coursIntroJEE:war" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
@@ -11,7 +11,11 @@
   <component name="ChangeListManager">
     <list default="true" id="77bebcba-2840-4303-bb99-f1cc38f5da68" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/introjee/servlet/AddProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/introjee/servlet/AddProductServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/introjee/daos/ProductDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/introjee/daos/ProductDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/introjee/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/introjee/models/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/introjee/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/introjee/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/introjee/servlet/HelloServlet.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/introjee/servlet/UpdateProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/introjee/servlet/UpdateProductServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/product/getAll.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/product/getAll.jsp" afterDir="false" />
@@ -24,13 +28,21 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -62,33 +74,51 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "copyright"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../formation java" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.applicationServers" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\JAVA\Desktop\java-projects\introJEE\.idea" />
       <recent name="C:\Users\JAVA\Desktop\java-projects\introJEE" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="Tomcat 9.0.64" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.64" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/introJEE" />
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.64">
+    <configuration name="Migration" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.introjee.daos.Migration" />
+      <module name="coursIntroJEE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.introjee.daos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 9.0.64" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.64" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/coursIntroJEE_war/" />
+      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="introJEE:war exploded">
+        <artifact name="coursIntroJEE:war">
           <settings>
-            <option name="CONTEXT_PATH" value="/introJEE" />
+            <option name="CONTEXT_PATH" value="/coursIntroJEE_war" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="df03e857-d78a-45cb-913f-491f330aeb84" />
+        <option name="BASE_DIRECTORY_NAME" value="359d0cfb-2d09-4aa2-8194-034680b4f55c" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -96,7 +126,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="64833" />
+        <option name="DEBUG_PORT" value="52180" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -161,10 +191,19 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="introJEE:war exploded" />
+          <artifact name="coursIntroJEE:war" />
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Tomcat Server.Tomcat 9.0.64" />
+      <item itemvalue="Application.Migration" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Migration" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -175,6 +214,7 @@
       <option name="presentableId" value="Default" />
       <updated>1657612186151</updated>
       <workItem from="1657612187760" duration="35049000" />
+      <workItem from="1657804099911" duration="6590000" />
     </task>
     <servers />
   </component>
@@ -191,5 +231,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

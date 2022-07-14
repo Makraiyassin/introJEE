@@ -14,10 +14,12 @@ import lombok.Setter;
 public class Product {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @Column(name = "product_id")
     private int id;
     private String name;
     private String brand;
     private String category;
+    @Column(columnDefinition = "DECIMAL(7,2)")
     private double price;
 
     public Product(String name, String brand, String category, double price) {

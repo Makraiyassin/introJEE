@@ -25,8 +25,8 @@
     #main .card{
         margin: 1%;
     }
-    #retour{
-        margin: 1% 50%;
+    #link{
+        text-align: center;
     }
 </style>
     <%! ProductService service = ProductService.getInstance(); %>
@@ -61,9 +61,10 @@
             </div>
         <% };%>
     </div>
-
-    <a href=".." id="retour" class="btn btn-outline-primary">retour</a>
-    <a href="./addProduct.jsp" class="btn btn-outline-primary">retour</a>
+    <div id="link">
+        <a href=".." class=" btn btn-outline-primary">retour</a>
+        <a href="./addProduct.jsp" class=" btn btn-outline-primary">ajouter produit</a>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
