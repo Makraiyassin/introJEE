@@ -16,9 +16,9 @@ public class ProductService {
     private final List<Product> productList = new ArrayList<>();
 //    private int lastId;
 
-    EntityManagerFactory emf = Persistence.createEntityManagerFactory("shopjeePersist");
-    EntityManager manager = emf.createEntityManager();
-    ProductDao dao = new ProductDao(manager);
+    private final EntityManagerFactory emf = Persistence.createEntityManagerFactory("shopjeePersist");
+    private final EntityManager manager = emf.createEntityManager();
+    private final ProductDao dao = new ProductDao(manager);
     public static ProductService getInstance() {
         System.out.println("recup dans l'instance");
         return instance == null ? instance = new ProductService() : instance;
