@@ -1,7 +1,3 @@
-### Courses OCA (1Z0819):
-
-https://app.pluralsight.com/paths/certificate/java-se-11-developer-certification-1z0-819
-
 ## DB for project:
 
 CREATE DATABASE shopjee;
